@@ -1,0 +1,9 @@
+All exmaples can be compiled in the respective folder using:
+
+clang++ -Ofast -o test -std=c++14 main.cc -march=native -fopenmp
+
+
+
+
+
+
