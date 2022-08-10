@@ -37,13 +37,6 @@ public:
   static T eps_atmo;
   static constexpr double c2p_tol = 1.e-10;
 
-  template <typename Tstorage, typename Fstorage>
-  static inline void compute_flux(Tstorage &storage, Fstorage &flux) {
-
-    // Compute fluxes for all components, here we have only one!
-    assert(!"Not implemented");
-    return;
-  };
 
   template <int dir, typename Td>
   static inline decltype(auto) compute_flux(std::array<Td, num_vars> &U) {

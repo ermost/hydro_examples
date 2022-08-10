@@ -25,20 +25,6 @@ public:
   static constexpr int num_aux = 0;
 
 
-  template <typename Tstorage, typename Fstorage>
-  static inline void compute_flux(Tstorage &storage, Fstorage &flux) {
-
-    // Compute fluxes for all components, here we have only one!
-
-#pragma omp simd
-    for (int ijk = 0; ijk < Tstorage::ndof; ++ijk) {
-      // IMPLEMENT FLUX FORMULA
-      //flux.U[ijk] = ...;
-    };
-
-    return;
-  };
-
   template <int dir,typename Td>
   static inline decltype(auto) compute_flux(std::array<Td, num_vars> &U) {
 
