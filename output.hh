@@ -27,7 +27,7 @@ template <typename Tstorage> inline bool output(Tstorage &U, int iteration) {
   std::string filename = "output/output_" + std::to_string(iteration) + ".asc";
   std::ofstream ostrm(filename);
 
-  assert(ostrm.good());
+  assert(ostrm.good() && "'output' folder not present");
 
   for (int ijk = 0; ijk < U.ndof; ++ijk) {
       int ijkN = ijk;
