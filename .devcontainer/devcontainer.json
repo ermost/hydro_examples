@@ -1,0 +1,6 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.195.0/containers/cpp
+{
+	"name": "Dev environment",
+	"image": "mcr.microsoft.com/vscode/devcontainers/cpp:0-ubuntu-20.04"
+}
