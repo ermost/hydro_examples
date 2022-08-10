@@ -20,12 +20,14 @@
 
 #include <fstream>
 #include <iostream>
+#include <sstream>
+#include <iomanip>
 #include <string>
 
 template <typename Tstorage> inline bool output(Tstorage &U, int iteration) {
-
-  std::string filename = "output/output_" + std::to_string(iteration) + ".asc";
-  std::ofstream ostrm(filename);
+  std::stringstream ss;
+  ss << "output/output_" << std::setfill('0') << std::setw(8) << iteration << ".asc";
+  std::ofstream ostrm(ss.str());
 
   assert(ostrm.good() && "'output' folder not present");
 
